@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealCrawl</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/simple-line-icons.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/user.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Article-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Footer-Basic.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Login-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Login-Form-Dark.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-Clean1-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-Clean1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-with-Button1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Registration-Form-with-Photo.css') }}">
+</head>
+
+<body style="background-image:url({{ url_for('static',filename='assets/img/city_bg.jpg') }});">
+    <div style="width:100%;">
+        <nav class="navbar navbar-default navigation-clean" style="background-color:rgba(255,255,255,0.16);height:13px;padding:0px;width:100%;">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);font-family:Roboto, sans-serif;font-weight:100;margin:6px;margin-top:-1px;margin-left:5%;font-size:24px;">Bear<span style="color:#eaaf0f;font-weight:500;">Crawl </span> </a>
+                    <button
+                    class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right" style="margin-top:-1px;color:rgb(255,255,255);font-family:Exo, sans-serif;margin-right:-19px;">
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);">Deadlines </a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);">Explore </a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);">My Clubs</a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);">My Profile</a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);">Settings </a></li>
+                        <li role="presentation"><a href="/logout/" style="color:rgb(255,255,255);padding-right:-31px;">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div></div>
+    <script src="{{ url_for('static',filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/bs-animation.js') }}"></script>
+</body>
+
+</html>
