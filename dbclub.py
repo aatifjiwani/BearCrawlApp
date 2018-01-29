@@ -1,10 +1,7 @@
 import MySQLdb
 
 def connectionClub():
-    conn = MySQLdb.connect(host="bearcrawl.mysql.database.azure.com",
-                          user="bearcrawladmin@bearcrawl",
-                          passwd="BearCrawl2017",
-                          db="bearcrawlclubs")
+    conn = MySQLdb.connect(host="aatifjiwani.mysql.pythonanywhere-services.com", user="aatifjiwani", passwd="BearCrawl2017", db="aatifjiwani$bearcrawlclubs")
     c = conn.cursor()
-    
+
     return c, conn
