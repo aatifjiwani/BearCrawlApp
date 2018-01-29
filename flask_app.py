@@ -253,7 +253,28 @@ def profile():
         resume = c.fetchone()[18]
         profilepic = c.fetchone()[19]
         
-        return render_template('StudentProfile.html', first=firstname )
+        student = {
+            "first": firstname,
+            "last": lastname,
+            "age": age,
+            "majors": majors,
+            "about": about,
+            "firstyear": firstyear,
+            "school": school,
+            "gpa": gpa,
+            "volunteer": volunteer,
+            "profexp": profexp,
+            "certawards": certawards,
+            "priors": priors,
+            "interests": interests,
+            "pronouns": pronouns,
+            "race": race,
+            "link": link,
+            "resume": resume,
+            "profilepic": profilepic
+        }
+        
+        return render_template('StudentProfile.html', student=student )
     except Exception as e:
         return render_template('StudentProfile.html')
 
