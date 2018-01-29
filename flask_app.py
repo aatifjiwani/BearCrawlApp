@@ -150,8 +150,8 @@ def clubUpload():
 
         app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-        clubfilename = "clubprofile/" + filename
-        flyerFilename = "clubflyer/" + resumeFilename
+        clubfilename = "clubprofile/" + clubfilename
+        flyerFilename = "clubflyer/" + flyerFilename
 
         if password:
             c.execute("INSERT INTO clubs (email, password) VALUES ('%s', '%s')" %
