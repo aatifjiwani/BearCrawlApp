@@ -103,7 +103,75 @@ def clubLogin():
 @app.route('/clubUpload/', methods=['GET', 'POST'])
 def clubUpload():
     try:
-        return
+        c, conn = connectionClub()
+
+
+        email = request.form['email']
+        clubname = request.form['clubname']
+        mission = request.form['mission']
+        descrip = request.form['description']
+        history = request.form['history']
+        targets = request.form['targets']
+        tags = request.form['tags']
+        link = request.form['link']
+        password = request.form['password']
+
+        clubfilename = ''
+        flyerFilename = ''
+        
+        app.config['UPLOAD_FOLDER'] = '/home/aatifjiwani/mysite/BearCrawlApp/static/clubprofile/'
+
+        if 'clubprofilepic' not in request.files:
+            pass
+            #return redirect(url_for('studentRegister'))
+
+        file = request.files['clubprofilepic']
+
+        if file.filename == '':
+            pass
+            #return redirect(url_for('studentRegister'))
+        else:
+            clubfilename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], clubfilename))
+
+        app.config['UPLOAD_FOLDER'] = '/home/aatifjiwani/mysite/BearCrawlApp/static/clubflyer/'
+
+        if 'flyer' not in request.files:
+            pass
+            #return redirect(url_for('studentRegister'))
+
+        flyerFile = request.files['flyer']
+        if flyerFile.filename == '':
+            pass
+            #return redirect(url_for('studentRegister'))
+        else:
+            flyerFilename = secure_filename(flyerFile.filename)
+            flyerFile.save(os.path.join(app.config['UPLOAD_FOLDER'], flyerFilename))
+
+        app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+        clubfilename = "clubprofile/" + filename
+        flyerFilename = "clubflyer/" + resumeFilename
+
+        if password:
+            c.execute("INSERT INTO clubs (email, password) VALUES ('%s', '%s')" %
+                             (thwart(email), thwart(password)))
+            conn.commit()
+
+            c.execute("INSERT INTO clubprofiles (email, clubname, mission, descrip, history, targets, tags, link, password, profilepic, flyer) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (thwart(email), thwart(clubname), thwart(mission), thwart(descrip), thwart(history), thwart(targets), thwart(tags), thwart(link), thwart(password), thwart(profilepic), thwart(flyer)))
+
+            conn.commit()
+
+            c.close()
+            conn.close()
+
+            gc.collect()
+
+            session['logged_in'] = True
+            session['clubEmail'] = email
+            session['club'] = True
+
+            return redirect(url_for('clubProfile'))
     except Exception as e:
         return (str(e))
 
