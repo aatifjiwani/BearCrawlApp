@@ -353,7 +353,7 @@ def profile():
 
 @app.route('/clubProfile/')
 @login_required
-def clubProflile():
+def clubProfile():
     return render_template('ClubProfile.html')
 
 @app.route('/logout/')
