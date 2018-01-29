@@ -276,6 +276,7 @@ def profile():
         
         return render_template('StudentProfile.html', student=student)
     except Exception as e:
+        print(str(e))
         return render_template('StudentProfile.html')
 
 @app.route('/clubProfile/')
