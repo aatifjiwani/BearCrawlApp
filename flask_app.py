@@ -257,24 +257,24 @@ def profile():
         profilepic = results[0][19]
 
         student = [
-            firstname,
-            lastname,
-            age,
-            majors,
-            about,
-            firstyear,
-            school,
-            gpa,
-            volunteer,
-            profexp,
-            certawards,
-            priors,
-            interests,
-            pronouns,
-            race,
-            link,
-            resume,
-            profilepic
+            firstname, #1
+            lastname, #2
+            age, #3
+            majors, #4
+            about, #5
+            firstyear, #6
+            school, #7
+            gpa, #8
+            volunteer, #9
+            profexp, #10
+            certawards, #11
+            priors, #12
+            interests, #13
+            pronouns, #14
+            race, #15
+            link, #16
+            resume, #17
+            profilepic #18
         ]
 
         return render_template('StudentProfile.html', student=student)
