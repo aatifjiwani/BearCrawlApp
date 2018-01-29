@@ -34,7 +34,10 @@ def already_login(f):
     @wraps(f)
     def wrap(*args, **kwargs):
         if 'logged_in' in session:
-            return redirect(url_for('profile'))
+            if 'club' in session:
+                return redirect(url_for('clubProfile'))
+            else:
+                return redirect(url_for('profile'))
         else:
             return f(*args, **kwargs)
     return wrap
@@ -83,7 +86,7 @@ def clubLogin():
             data = c.fetchone()[1]
             if data == thwart(request.form['password']):
                 session['logged_in'] = True
-                session['email'] = thwart(request.form['email'])
+                session['clubEmail'] = thwart(request.form['email'])
                 session['club'] = True
                 return redirect(url_for('clubProfile'))
             else:
@@ -349,12 +352,45 @@ def profile():
     except Exception as e:
         print("ths")
         print(str(e))
-        return render_template('StudentProfile.html')
+        return render_template('StudentLogin.html')
 
 @app.route('/clubProfile/')
 @login_required
 def clubProfile():
-    return render_template('ClubProfile.html')
+    error = ''
+    print("ween")
+    try:
+        c, conn = connectionClub()
+        data = c.execute("SELECT * FROM clubprofiles WHERE email = '%s'" % (thwart(session['clubEmail'])))
+        results = c.fetchall()
+        print(results[0])
+        clubname =results[0][1]
+        mission = results[0][2]
+        descrip = results[0][3]
+        history = results[0][4]
+        targets = results[0][5]
+        tags = results[0][6]
+        link = results[0][7]
+        profilepic = results[0][9]
+        flyer = results[0][10]
+
+        club = [
+            clubname, #1
+            mission, #2
+            descrip, #3
+            history, #4
+            targets, #5
+            tags, #6
+            link, #7
+            profilepic, #8
+            flyer #9
+        ]
+
+        return render_template('ClubProfile.html', club=club)
+    except Exception as e:
+        print("ths")
+        print(str(e))
+        return render_template('ClubLogin.html')
 
 @app.route('/logout/')
 @login_required
