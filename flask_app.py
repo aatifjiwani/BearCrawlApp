@@ -231,28 +231,31 @@ def contact():
 @login_required
 def profile():
     error = ''
+    print("ween")
     try:
         c, conn = connectionStudent()
         data = c.execute("SELECT * FROM profiles WHERE email = '%s'" % (thwart(session['email'])))
-        firstname = c.fetchone()[0]
-        lastname = c.fetchone()[1]
-        age = c.fetchone()[2]
-        majors = c.fetchone()[5]
-        about = c.fetchone()[6]
-        firstyear = c.fetchone()[7]
-        school = c.fetchone()[8]
-        gpa = c.fetchone()[9]
-        volunteer = c.fetchone()[10]
-        profexp = c.fetchone()[11]
-        certawards = c.fetchone()[12]
-        priors = c.fetchone()[13]
-        interests = c.fetchone()[14]
-        pronouns = c.fetchone()[15]
-        race = c.fetchone()[16]
-        link = c.fetchone()[17]
-        resume = c.fetchone()[18]
-        profilepic = c.fetchone()[19]
-        
+        results = c.fetchall()
+        print(results[0])
+        firstname = results[0][0]
+        lastname = results[0][1]
+        age = results[0][2]
+        majors = results[0][5]
+        about = results[0][6]
+        firstyear = results[0][7]
+        school = results[0][8]
+        gpa = results[0][9]
+        volunteer = results[0][10]
+        profexp = results[0][11]
+        certawards = results[0][12]
+        priors = results[0][13]
+        interests = results[0][14]
+        pronouns = results[0][15]
+        race = results[0][16]
+        link = results[0][17]
+        resume = results[0][18]
+        profilepic = results[0][19]
+
         student = [
             firstname,
             lastname,
@@ -273,9 +276,10 @@ def profile():
             resume,
             profilepic
         ]
-        
+
         return render_template('StudentProfile.html', student=student)
     except Exception as e:
+        print("ths")
         print(str(e))
         return render_template('StudentProfile.html')
 
