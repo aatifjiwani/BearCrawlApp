@@ -235,7 +235,7 @@ def profile():
         c, conn = connectionStudent()
         data = c.execute("SELECT * FROM profiles WHERE email = '%s'" % (thwart(session['email'])))
         firstname = c.fetchone()[0]
-        
+
         return render_template('StudentProfile.html', first=firstname )
     except Exception as e:
         return render_template('StudentProfile.html')
