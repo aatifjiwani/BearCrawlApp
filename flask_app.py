@@ -253,8 +253,8 @@ def logout():
     gc.collect()
     return redirect(url_for('studentLogin'))
 
-if __name__ == "__main__":
-    app.run()
+#if __name__ == "__main__":
+    #app.run()
 
 
 
