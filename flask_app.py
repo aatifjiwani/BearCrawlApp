@@ -158,7 +158,7 @@ def clubUpload():
                              (thwart(email), thwart(password)))
             conn.commit()
 
-            c.execute("INSERT INTO clubprofiles (email, clubname, mission, descrip, history, targets, tags, link, password, profilepic, flyer) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (thwart(email), thwart(clubname), thwart(mission), thwart(descrip), thwart(history), thwart(targets), thwart(tags), thwart(link), thwart(password), thwart(profilepic), thwart(flyer)))
+            c.execute("INSERT INTO clubprofiles (email, clubname, mission, descrip, history, targets, tags, link, password, profilepic, flyer) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (thwart(email), thwart(clubname), thwart(mission), thwart(descrip), thwart(history), thwart(targets), thwart(tags), thwart(link), thwart(password), thwart(clubfilename), thwart(flyerFilename)))
 
             conn.commit()
 
