@@ -235,7 +235,24 @@ def profile():
         c, conn = connectionStudent()
         data = c.execute("SELECT * FROM profiles WHERE email = '%s'" % (thwart(session['email'])))
         firstname = c.fetchone()[0]
-
+        lastname = c.fetchone()[1]
+        age = c.fetchone()[2]
+        majors = c.fetchone()[5]
+        about = c.fetchone()[6]
+        firstyear = c.fetchone()[7]
+        school = c.fetchone()[8]
+        gpa = c.fetchone()[9]
+        volunteer = c.fetchone()[10]
+        profexp = c.fetchone()[11]
+        certawards = c.fetchone()[12]
+        priors = c.fetchone()[13]
+        interests = c.fetchone()[14]
+        pronouns = c.fetchone()[15]
+        race = c.fetchone()[16]
+        link = c.fetchone()[17]
+        resume = c.fetchone()[18]
+        profilepic = c.fetchone()[19]
+        
         return render_template('StudentProfile.html', first=firstname )
     except Exception as e:
         return render_template('StudentProfile.html')
