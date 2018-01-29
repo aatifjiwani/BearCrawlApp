@@ -118,6 +118,7 @@ def clubUpload():
         tags = request.form['tags']
         link = request.form['link']
         password = request.form['password']
+        imptdates = request.form['important']
 
         clubfilename = ''
         flyerFilename = ''
@@ -161,7 +162,7 @@ def clubUpload():
                              (thwart(email), thwart(password)))
             conn.commit()
 
-            c.execute("INSERT INTO clubprofiles (email, clubname, mission, descrip, history, targets, tags, link, password, profilepic, flyer) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (thwart(email), thwart(clubname), thwart(mission), thwart(descrip), thwart(history), thwart(targets), thwart(tags), thwart(link), thwart(password), thwart(clubfilename), thwart(flyerFilename)))
+            c.execute("INSERT INTO clubprofiles (email, clubname, mission, descrip, history, targets, tags, link, password, profilepic, flyer, imptdates) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (thwart(email), thwart(clubname), thwart(mission), thwart(descrip), thwart(history), thwart(targets), thwart(tags), thwart(link), thwart(password), thwart(clubfilename), thwart(flyerFilename), thwart(imptdates)))
 
             conn.commit()
 
@@ -348,6 +349,9 @@ def profile():
             profilepic #18
         ]
 
+        c.close()
+        conn.close()
+        
         return render_template('StudentProfile.html', student=student)
     except Exception as e:
         print("ths")
@@ -373,6 +377,7 @@ def clubProfile():
         link = results[0][7]
         profilepic = results[0][9]
         flyer = results[0][10]
+        imptdates = results[0][11]
 
         club = [
             clubname, #1
@@ -383,9 +388,13 @@ def clubProfile():
             tags, #6
             link, #7
             profilepic, #8
-            flyer #9
+            flyer, #9
+            imptdates, #10
+            session['clubEmail'] #11
         ]
 
+        c.close()
+        conn.close()
         return render_template('ClubProfile.html', club=club)
     except Exception as e:
         print("ths")
