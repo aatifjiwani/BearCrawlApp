@@ -230,7 +230,15 @@ def contact():
 @app.route('/profile/')
 @login_required
 def profile():
-    return render_template('StudentProfile.html')
+    error = ''
+    try:
+        c, conn = connectionStudent()
+        data = c.execute("SELECT * FROM profiles WHERE email = '%s'" % (thwart(session['email'])))
+        firstname = c.fetchone()[0]
+        
+        return render_template('StudentProfile.html', first=firstname )
+    except Exception as e:
+        return render_template('StudentProfile.html')
 
 @app.route('/clubProfile/')
 @login_required
