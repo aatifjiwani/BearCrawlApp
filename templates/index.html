@@ -6,32 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RealCrawl</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/fonts/simple-line-icons.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
-    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/user.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Article-Clean.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Footer-Basic.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Login-Form-Clean-1.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Login-Form-Clean.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Login-Form-Dark.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-Clean1-1.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-Clean1.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Navigation-with-Button1.css') }}">
+    <link rel="stylesheet" href="assets/css/Pricing-Table-with-Icon-Buy-Button.css">
+    <link rel="stylesheet" href="assets/css/Pricing-Table-with-Icon-Buy-Button1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Card.css">
     <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Registration-Form-with-Photo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Search-Field-With-Icon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/Simple-Slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/user.css') }}">
 </head>
 
-<body style="background-image:url({{ url_for('static',filename='assets/img/login_wall.jpg') }});height:3325px;background-size:cover;font-weight:150;font-family:Roboto, sans-serif;background-repeat:no-repeat;">
-    <div>
+<body style="background-image:url({{ url_for('static',filename='assets/img/login_wall.jpg') }});background-size:cover;"><div>
         <nav class="navbar navbar-default navigation-clean" style="background-color:rgba(255,255,255,0.11);height:53px;">
             <div class="container-fluid">
-                <div class="navbar-header"><a class="navbar-brand" href="/" style="font-weight:100;font-family:Roboto, sans-serif;color:#fffffd;font-size:24px;padding:0px;margin:6px;width:135px;">Bear<span style="color:#eaaf0f;font-weight:300;">Crawl </span></a>
-                    <button
-                    class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1" style="margin:-1px;padding:10px;margin-bottom:0px;margin-left:0px;margin-right:10px;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <div class="navbar-header"><a class="navbar-brand" href="index.html" style="font-weight:100;font-family:Roboto, sans-serif;color:#fffffd;font-size:24px;padding:0px;margin:6px;width:135px;">Bear<span style="color:#eaaf0f;font-weight:300;">Crawl </span></a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1" style="margin:-1px;padding:10px;margin-bottom:0px;margin-left:0px;margin-right:10px;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right" style="height:41px;margin:-9px;margin-right:-31px;">
@@ -48,51 +55,66 @@
         <h1 class="text-center" style="color:rgb(244,236,236);margin:0px;margin-top:199px;font-size:6vw;font-family:Roboto, sans-serif;font-style:normal;font-weight:100;">Welcome to</h1>
         <h1 class="text-center" style="color:rgb(244,236,236);margin:0px;margin-top:14px;font-size:6vw;font-family:Roboto, sans-serif;font-weight:100;">Bear<span style="color:#eaaf0f;font-weight:300;">Crawl </span></h1>
         <h1 class="text-center" style="color:rgb(244,236,236);margin:0px;margin-top:38px;font-size:2vw;font-family:Roboto, sans-serif;margin-bottom:419px;font-weight:105;">Find your community. Find your club. Find your home. </h1></div>
-    <p class="text-center" style="margin-bottom:36px;color:rgb(247,243,243);font-size:42px;font-weight:100;font-family:Roboto, sans-serif;">Mission </p>
-    <p class="text-center" style="margin:107px;margin-bottom:489px;color:rgb(247,243,243);font-family:Roboto, sans-serif;font-weight:100;margin-top:20px;font-size:30px;">Lorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum
-        LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum LoremLorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem
-        IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem </p>
+    <p class="text-center" style="margin-bottom:36px;color:rgb(247,243,243);font-size:42px;font-weight:100;font-family:Roboto, sans-serif;">Our Mission:</p>
+    <p class="text-center" style="margin:107px;margin-bottom:200px;color:rgb(247,243,243);font-family:Roboto, sans-serif;font-weight:100;margin-top:20px;font-size:30px;">To improve the student experience at UC Berkeley by connecting prospective members and great campus organizations and enabling simple, effective management features.
+</p>
+<p class="text-center" style="margin-bottom:0px;color:rgb(247,243,243);font-size:42px;font-weight:100;font-family:Roboto, sans-serif;">The Problem</p>
+    <p class="text-center" style="margin:107px;margin-bottom:200px;color:rgb(247,243,243);font-family:Roboto, sans-serif;font-weight:100;margin-top:20px;font-size:30px;">Our team surveyed 50 randomly selected students and several high impact clubs regarding their recruitment and application process. Students overwhelmingly feel unsatisfied with the current recruitment process, which is often little more than a flyer to the face - over half of the students surveyed stated that they disliked the “sprouling” method. Similarly, organization leaders are frustrated with undirected flyering, which entails  low response rates and missed opportunities to attract devoted and enthusiastic potential members. Even through the selection stage, executives are faced with having to gauge huge spreadsheets of application data and essays - a decidedly unideal experience.
+
+</p>
+<p class="text-center" style="margin-bottom:36px;color:rgb(247,243,243);font-size:42px;font-weight:100;font-family:Roboto, sans-serif;">The Solution</p>
+<p class="text-center" style="margin:107px;margin-bottom:200px;color:rgb(247,243,243);font-family:Roboto, sans-serif;font-weight:100;margin-top:20px;font-size:30px;">
+BearCrawl sharpens and expedites the recruitment process by matching prospective students and organizations and providing easy event management tools. Clubs can clearly advertise their missions, available roles, or prior projects, and students can advertise their experiences and interests. BearCrawl then suggests to students clubs they might be interested in applying to, and clubs are suggested with students they might want to recruit. 
+
+</p>
     <header></header>
     <div style="align-self:center;">
         <div class="container" style="padding-right:0px;padding-left:0px;margin-right:0px;margin-left:0px;width:auto;">
-            <div class="row" style="background-color:rgba(181,204,231,0.31);padding:51px;margin-top:33px;margin-bottom:102px;">
+            <div class="row" style="background-color:rgba(181,204,231,0.31);padding:51px;margin-top:33px;margin-bottom:400px;">
                 <div class="col-md-4" style="padding-right:0px;"><i class="glyphicon glyphicon-link" data-bs-hover-animate="pulse" style="color:rgb(255,255,255);font-size:10vw;padding-left:6%;text-align:center;width:100%;"></i>
                     <p class="text-center" style="color:rgb(245,241,241);font-size:5vw;width:100%;margin-left:0px;padding-left:6%;margin-top:24px;font-family:Roboto, sans-serif;font-weight:100;">Connect </p>
-                    <p class="text-center" style="background-color:rgba(255,255,255,0);color:rgb(251,243,243);font-family:Roboto, sans-serif;font-weight:100;font-size:17px;">Lorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem
-                        Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum LoremLorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum
-                        LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem </p>
+                    <p class="text-center" style="background-color:rgba(255,255,255,0);color:rgb(251,243,243);font-family:Roboto, sans-serif;font-weight:100;font-size:17px;">Students are given the ability to create profiles that show their
+interests and qualifications, a virtual representation for others to see and recruit with.                      
+
+
+Clubs are given the ability to create pages that describe their
+available roles and prior projects, giving them an unrivaled level of online campus visibility.
+
+
+Then, Bear Crawl matches students with these
+clubs and begin their application process
+
+
+Our platform gives clubs the ability to contact
+prospective students and view their profiles and students the ability to apply, make groups, and communicate online. </p>
                 </div>
                 <div class="col-md-4" style="padding-right:0px;padding-left:0px;font-size:39px;"><i class="fa fa-group" data-bs-hover-animate="pulse" style="color:rgb(255,255,255);font-size:10vw;padding-left:6%;text-align:center;width:100%;"></i>
                     <p class="text-center" style="color:rgb(255,255,255);font-size:5vw;padding-left:7%;width:100%;margin-left:-1px;margin-top:24px;font-family:Roboto, sans-serif;font-weight:100;">Manage </p>
-                    <p class="text-center" style="font-size:17px;color:rgb(248,242,242);font-family:Roboto, sans-serif;font-weight:100;">Lorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem
-                        Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum LoremLorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum
-                        LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem </p>
+                    <p class="text-center" style="font-size:17px;color:rgb(248,242,242);font-family:Roboto, sans-serif;font-weight:100;">Students can manage their online campus
+perception by updating profiles and interests.
+
+
+Their applications, deadlines, and
+info sessions are organized through
+Bear Crawl’s multifaceted tools for campus presence management.
+
+
+Clubs can view and manage applicant pool,
+set interview times, and update events all in a central location.
+
+
+Clubs can now streamline their application process
+through a “Common App” – making it
+easier for more students to apply more
+efficiently, in contrast to the current scattered system of flyers, websites, and word-of-mouth.</p>
                 </div>
                 <div class="col-md-4" style="padding-right:0px;padding-left:0px;"><i class="fa fa-location-arrow" data-bs-hover-animate="pulse" style="color:rgb(255,255,255);font-size:10vw;padding-left:7%;text-align:center;width:100%;"></i>
                     <p class="text-center" style="color:rgb(255,255,255);width:100%;font-size:5vw;margin-left:0px;margin-right:0px;padding-left:7%;margin-top:24px;font-family:Roboto, sans-serif;font-weight:100;">Explore </p>
-                    <p class="text-center" style="color:rgb(248,236,236);font-family:Roboto, sans-serif;font-weight:100;font-size:17px;">Lorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem
-                        Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Lorem Lorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum
-                        LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum LoremLorem Ipsum Lorem Ipsum Lorem IIpsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem</p>
+                    <p class="text-center" style="color:rgb(248,236,236);font-family:Roboto, sans-serif;font-weight:100;font-size:17px;"> Bear Crawl gives smaller clubs an opportunity to market themselves, leveling the playing field between larger organizations and smaller ones. It also gives students the opportunity to explore campus culture, potential clubs, and participate in extracurriculars, without dealing with the chaos of Sproul. Ideally, Bear Crawl would provide an online landscape for campus-wide communication in a much more digestible way, while also saving club executives the task of tabling on campus for hours daily and posting to various scattered facebook groups. </p>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" style="padding-bottom:60px;margin-bottom:82px;"><i class="icon-graph" style="color:rgb(255,255,255);font-size:97px;margin:98px;margin-left:141px;"></i>
-                    <p class="text-center" style="color:rgb(255,255,255);font-family:Roboto, sans-serif;font-weight:100;font-size:25px;">EXPLANATION OF GRAPH</p>
-                </div>
-                <div class="col-md-4"><i class="icon-graph" style="color:rgb(255,255,255);font-size:97px;margin:98px;margin-left:135px;"></i>
-                    <p class="text-center" style="color:rgb(255,255,255);font-family:Roboto, sans-serif;font-weight:100;font-size:25px;">EXPLANATION OF GRAPH</p>
-                </div>
-                <div class="col-md-4"><i class="icon-graph" style="color:rgb(255,255,255);font-size:97px;margin:98px;margin-left:122px;"></i>
-                    <p class="text-center" style="color:rgb(255,255,255);font-family:Roboto, sans-serif;font-weight:100;font-size:25px;">EXPLANATION OF GRAPH</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p class="text-center" style="color:rgb(255,255,255);font-family:Roboto, sans-serif;font-size:44px;font-weight:100;margin:-73px;margin-bottom:312px;">Endorsements </p>
     <div class="footer-basic" style="height:129px;padding:12px;">
         <footer>
             <div class="social" style="height:46px;"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
@@ -103,12 +125,19 @@
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">Ripetide© 2018</p>
+            <p class="copyright">BearCrawl© 2018</p>
         </footer>
     </div>
     <script src="{{ url_for('static',filename='assets/js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/js/bs-animation.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/bs-animation-1.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+
+    <script src="{{ url_for('static',filename='assets/js/bs-animation-1.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/Profile-Edit-Form.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/Simple-Slider.js') }}"></script>
 </body>
 
 </html>
