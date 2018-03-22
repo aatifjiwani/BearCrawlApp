@@ -409,6 +409,17 @@ def logout():
     gc.collect()
     return redirect(url_for('studentLogin'))
 
+@app.route('/error/')
+def error():
+    if 'student' in session:
+        return render_template('StudentError.html')
+    else:
+        return render_template('ClubError.html')
+
+@app.route('/studentSearch/')
+def studentSearch():
+    return render_template('StudentSearch.html')
+
 #if __name__ == "__main__":
     #app.run()
 
