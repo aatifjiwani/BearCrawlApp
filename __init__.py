@@ -17,6 +17,8 @@ from functools import wraps
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 
+varaible = "hello"
+
 UPLOAD_FOLDER = '/home/aatifjiwani/mysite/BearCrawlApp/static/images/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
