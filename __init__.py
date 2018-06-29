@@ -22,6 +22,8 @@ varaible = "hello"
 UPLOAD_FOLDER = '/home/aatifjiwani/mysite/BearCrawlApp/static/images/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+another = "another"
+
 def login_required(f):
     @wraps(f)
     def wrap(*args, **kwargs):
