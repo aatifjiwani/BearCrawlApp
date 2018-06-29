@@ -23,6 +23,7 @@ UPLOAD_FOLDER = '/home/aatifjiwani/mysite/BearCrawlApp/static/images/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 another = "another"
+blah = "balh"
 
 def login_required(f):
     @wraps(f)
